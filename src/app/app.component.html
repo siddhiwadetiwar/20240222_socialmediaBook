@@ -1,0 +1,245 @@
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Social Media</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script
+    src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    data-auto-replace-svg="nest"
+  ></script>
+
+
+<nav>
+  <div class="nav-left">
+    <a href="Index.html">
+      <img src="https://i.postimg.cc/Y9nZymQq/logo2.png" class="logo" />
+    </a>
+    <ul>
+      <li><img src="https://i.postimg.cc/Fs3m1Djy/notification.png" /></li>
+      <li><img src="https://i.postimg.cc/YqGKZ8nc/inbox.png" /></li>
+      <li><img src="https://i.postimg.cc/xCzpgFjg/video.png" /></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <div class="search-box">
+      <img src="https://i.postimg.cc/SKtHgM6Q/search.png" />
+      <input type="text" placeholder="Search" />
+    </div>
+    <div class="nav-user-icon online" >
+      <img src={{profile_image}}/>
+    </div>
+  </div>
+  <!----------------Settings Menu"----------------------->
+  <div class="settings-menu" >
+    <div id="dark-btn" >
+      <span></span>
+    </div>
+    <div class="settings-menu-inner">
+      <div class="user-profile">
+        <img src="https://i.postimg.cc/cHg22LhR/profile-pic.png" />
+        <div>
+          <p>John Nicholson</p>
+          <a href="profile.html">See your profile</a>
+        </div>
+      </div>
+      <hr />
+      <div class="user-profile">
+        <img src="https://i.postimg.cc/hv3nx52s/feedback.png" />
+        <div>
+          <p>Give Feedback</p>
+          <a href="#">Help us to improve the new design</a>
+        </div>
+      </div>
+      <hr />
+      <div class="settings-links">
+        <img
+          src="https://i.postimg.cc/QCcPNYRV/setting.png"
+          class="settings-icon"
+        />
+        <a href="#"
+          >Settings & Privacy
+          <img src="https://i.postimg.cc/RF1dBMWr/arrow.png" width="10px"
+        /></a>
+      </div>
+      <div class="settings-links">
+        <img
+          src="https://i.postimg.cc/C5tydfK6/help.png"
+          class="settings-icon"
+        />
+        <a href="#"
+          >Help & Support<img
+            src="https://i.postimg.cc/RF1dBMWr/arrow.png"
+            width="10px"
+        /></a>
+      </div>
+      <div class="settings-links">
+        <img
+          src="https://i.postimg.cc/5yt1XVSj/display.png"
+          class="settings-icon"
+        />
+        <a href="#"
+          >Display & Accessibility
+          <img src="https://i.postimg.cc/RF1dBMWr/arrow.png" width="10px"
+        /></a>
+      </div>
+      <div class="settings-links">
+        <img
+          src="https://i.postimg.cc/PJC9GrMb/logout.png"
+          class="settings-icon"
+        />
+        <a href="#"
+          >Logout
+          <img src="https://i.postimg.cc/RF1dBMWr/arrow.png" width="10px"
+        /></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <!----------------Left Sidebar----------------------->
+  <div class="left-sidebar">
+    <div class="imp-links">
+      <a href="#"
+        ><img src="https://i.postimg.cc/RCj4MjnC/news.png" />Latest News</a
+      >
+      <a href="#"
+        ><img src="https://i.postimg.cc/MpBwMtV0/friends.png" />Friendss</a
+      >
+      <a href="#"><img src="https://i.postimg.cc/44FRWj1b/group.png" />Group</a>
+      <a href="#"
+        ><img
+          src="https://i.postimg.cc/0jh39RtT/marketplace.png"
+        />Marketplace</a
+      >
+      <a href="#"><img src="https://i.postimg.cc/VsXHCTVk/watch.png" />Watch</a>
+      <a href="#">See More</a>
+    </div>
+    <div class="shortcut-link">
+      <p>Your Shortcuts</p>
+      <div *ngFor="let shortcut of shortcuts" class="abc">
+        <a href="#">
+          <img [src]="shortcut.image_url" alt="{{ shortcut.text }}" />
+          {{ shortcut.text }}
+        </a>
+      </div>
+    </div>
+  </div>
+  <!----------------Main Sidebar----------------------->
+  <div class="main-content">
+    <div class="story-gallery">
+      <div class="story story1"style="background-image: linear-gradient(transparent,rgba(0,0,0,0.5)),url({{profile_image}});">
+        <img src="" />
+        <p>Post Story</p>
+      </div>
+      <div class="story story2" style="background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA2QMBIgACEQEDEQH/xAAcAAADAAIDAQAAAAAAAAAAAAAAAQIDBQYHCAT/xAA9EAABBAECAwYDBQYEBwAAAAABAAIDEQQFIQYSMQcTQVFhcSKBkRQyQqGxFSNSYtHhQ5KywRYkcoKi8PH/xAAZAQEBAQEBAQAAAAAAAAAAAAAAAQMCBAX/xAAgEQEBAAIDAQACAwAAAAAAAAAAAQIRAxIhMUFhBCIy/9oADAMBAAIRAxEAPwDtQhTSukUipRSoBOkE0mAqpFIiaTVUkgVJcqukkE0sc80WPC+aeRkUUYtz3mg0eqzUvPHHfGObxFqMsQlezTY5CIYWnZwBoOPmT1Uqxz/Xu1fTcOQw6VivzHjbvXksj+XUn6Bahnaznsdc+m4j2k2OSRw/P+y64xInON8xII3B6p5M3cgxRAcp9Oqm3Wo7r0ftM0POZEM4uwZnWCH7sB8Pi/quaxPZLG2SNwcx4DmuBsEH1XlUd602YnAH02+i7M7MuO5osrD0HPaHYjv3WPJ4xHwafMeHokqXF3ByopXSS6cppJWikGOkUrpFIMZCmllpSRugxEKSFlIUkIIAVUilVIrOhUQlQQFJhACpEKkUqATpBFIpVSSCaRSpOkGq4lnkxOHdUyIXcskeHK9h8iGGl5v0TRcvWsgx4jQWsoWdgF6Y1rHGVo+fjuFiXGkZ9WkLpPszP2fGmzZ3NZCasuPTZZ8uXXHxrxY9svW10nsyne1ozdRDWn8EYJXK8Ds+0HTm96McTSj8Uu9Ix+NNBhcGvzqHQEMJH1W/ZqmHPi9+2cGI7/JeXtb9erU/DQ6vpGBkRBr8WIho2PKLHsup9dgh0fWmZuK0AxO7zlut2n+y7S1XirQWc8bc5pk6cjWkldX8WGPUZWS4bu9ifJ3Yrbc9LCcXaZHL1uD0PA8TQRyt6PYHfUK6U40YhxoYh+CNrQD6CllXueBFJqqSpBNIVUikEFSQslKSgxkKSFlKgoITVUikH0UlSpCAATpAVBAqTATQgSVKkUgmkqpWkUGr4gfks0/mw38sveN9iL3B911Zo+jxSQ5WBHHWOcl1R7CgDsF3BmwmbElYBvVt9xuP0XXUOS3D4hyGzUwTBsrfIE7EfkvLz729n8fWv2+L9k6pYhc9zI7Nwx4t2PD4ui3kWltxdBzoeYlzmA3/AAnoapbKfXsSN5ia9nOwW/mNBg8FqWcWaC/AzBJl8vKPiDmkX7eax9r0eRxo8LZELWPwpck84+MxxtPN6Wei1mpaJLp8TBkNPfueyRwB/EHbLleh8XYUsL3RECNh6P2cdt6Wu4o1BmXnY32chweQQRvYu1ZbuOcpjq12FwhLNJoULcqR0s0TnMc925NH+9LdUtfw7jOxtHxmSAiV4MsgIqnO3/3pbKl7cN9Zt8/PXa6TSKVUnS6copBCqkUgghSVkISIQYypIVlSgmkUqQgz0ik0IABUkEwgAmhCASTQglCZQgVLr7tQhbiv0/NY1rObvInuA8TRbf5rsJcU7ScI5vDTmN2e2Zrmny8FxyTeOnfHbMvHCv2ONSH7Q0/IYC4hz4phzN/mGx6hbL/hTTcvGDpI8UuG5IwienrzLjPDOpMwcg4ubcUm4px2C5PkQsd8UermKM0OSgV5J54+h/qNBLoEUmo13zW4kd/u2RNY558Bt0H5r7+C+TP7QGMgYDjafA8NI6bANv5udt7LXa3quJpsDhjzOlnIID7Bon/6uW9j2nwR6Jkak1n7/KlLLvoxvQD8yteObu2PPlMZqOfoTQvS8IQhCASTRSKkpFUUigghQQshUlBKEIQZ0IQgYVKVSATSTQCEI6oEkn5eq12r65pWjRl2p58GP5Mc/wCI+zeqDYLgfG2uyjiXTtBi5WwOiM2QasuP4B8qJ+Y8lqde7Xoml0Wg4Bk6j7TlGh8mDc/Mj2XWeq8Q6lqmsDU83IJyxXI9jQ3kroAP/eqXHcsXG6yldj8TcO4+djiUDlePxN2IXXeo4+pYshjkmlLRsHei7I4U4jx9exvsuTyx5oG7B0f6t/p4KNW0tjra6tvMLxTeHlezzKbjrDDxpMvIAe9zyOpcuyeyzXp8fiSbh2R3NhyQl8IP4JG7mvcX82rQ50WFoOIZpng5EoPdxDqR5+y4TjatmQ6l9uw53w5TXlzZozRBPkvRxbyu2HJqTT1emuk9B7XNVxA1ms4sWfEPvPZ+6kHr4gn6e67C0PtC4c1jla3M+yTu/wAHLHdn6/dPyK20wcqQk1zXsD2ODmHo5psH5pqAQhCBeCkqkkVJUFWVBQJCEIMyFJKVoLBVLGCrBQUhK0WgfguMcYcb6ZwwzupebJznC2Y0RFj1cfwj8/IL6uMuIWcN6FNnEc8x+CCP+J56fIdT7Lzrl5M2XlS5GTK6SeV5e97zZcT42usYOU652ia/q4fG3JOFA7/DxSWmvV3X6UuJOeXvc55LnOPxOJsn3Klwrbz6qB94rtDf0ICiVttCvx+YVAfpSI1x785AlYXBzehaaI9it7pfF2saXjSw8v2jmA7sZDi/uz5j+lrX8vK4kkEHoK6JhpefhBPnXkuLhL9dzKx8WVkZ2o5cmXmSOlyJNnOPgPbwHoskUfIwAdSfqs8gqg0DmJQ1tOAPVoXUkiW7Hi6lcdcjbCmqVN+77KuWx0fXtU0KbvdKzJYCT9wOtjvdvQrtzgbtKh13Lh0zVIRjZ7wRHK1w7qU+VHcOPluF0j/skCY3texxa9pDg5potI6FSzavWHmhcX7POIzxLw5FkTG8yA9zkj+YdHfMUfquTXSzUypKdqSd0CJUlMqSgEJIQWi0iVNoMgKYKxAq7QZAUKLTv1QdPdtepOl1vC0xtlkGP3rh/M8kD8m/muufhIorkXaTkyZPHWrEu5mskbExvkGsaP1v6rjmx28uq0nxCeduU9R4pM3daxyk/Pw9lce7nV06qi63TQhEJ/QpMNDYkHpsgqWGifdAH7zSfBDerifOkE/Eb/Chn3BfVFNJ5pp90yaWGZ2z/kgsu38/RFc3jt4qIyCATuT+iJOoDiST+EIOcdj2suwOLm4TnnuM9jo6/naOZv5B31C74PReYuF8kYPFWizk7tzoeavAFwafyK9NnY1VLOqdpEpEpKAKSFJQO0WptFoKtIlBKglBkBTWMFVaCrTtTaAdx7oPOfGR73irVZPE5cm//dS1BB8evn5racS7cSar4/8ANydf+orXEtqja1k8R87z6bhSx1ObXSqWSUb2F87TRr1UH2B2yLWJjtlVqhlETWPMnO8srcEAmz4BTzbqdudwRAfHwWWvhCxeKou2QDj6r5n254aPxEWsjnKYhctk9AorKb+5G3fxJ8Ejy47C5x5nnx81mHQnoFhDe8f3jxsPujyVCw+aLJjyHXzMka8elEFeqmP52Nf4OAP13XleTaN3svT+mu5tNxHHqYGX/lC4yI+pK0rQSuVBKglBKklA7tNQnaC3FY7VOKi90FAp2pVWgq0WpTQeeeKmcvFWrt8suT9Vq3AUt5x410PG2sMrbvg7/Mxrv91oJJORtkOPo0WtZ8cMTwRsNwVyPT+zviHOxZMl0EeO4H93BK8B0gq7FWKXGhkw87S/nA5hvW3XzXo6PUMI4DchuTEcZrAS6RwAaPc9FhzZ3HWm3FhMvrzrm4eXpuW7Fz8eXHnb1ZI2vmPMeyxFy704qxtKz9KfNn91Nis6kkWy/Frh0XRmREIpnta4yMa4hj/4hexV48+y8nH1TaL+P3CfK8i+U0rjY006z9FsxYXOqvVJ7w3qSvs7mO75dvVVTAOmyaNtc5wPgVeJRc+/Jct0Pgb9uae3Mh1NsQLnNLDBfKR4Xzeyw8S8Jt4aigkbmvyXTuLSHRhobXluspyY3Lq0uFmPZoXEVRKo1Xovn5pS+owGerhZVEhzqJLX+XS1qzY55OdrgzpRsr03okve6LgP/ix4z/4heZph8LvZelOGxXD2m34Ysf8ApC5yWNmCkShIrhSKRTUFAWnam0WgyOUJIQWEBCEFIQhB0j2tMbHxrKWCi/Fic71NEfoAuGuaHytjdu2uYjzQhaRx+WZrW2DQ8llkHMad8VHa90IWmobrEQ1hAYxreYi6FWqOyEKaTZb+aD08/dCEVjJIascuwBQhcjn/AGbZsuJw5rczA15x3c7Gvur5R5Li+s6vm6zOZc6XmAdbIwKYz2CELHCTvW2d/rGtkaHEg+G4I6hYL52NLt7Qhb1jGOckRuryXpvRQG6NgAdPs8f+kJIXGTqPtCRQhcKR6qShCCShCEH/2Q==);">
+        <img src="" />
+        <p>jay dubey</p>
+      </div>
+      <div class="story story3" style="background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url();">
+        <img src="" />
+        <p>anuraj osan</p>
+      </div>
+      <div class="story story4" style="background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url();">
+        <img src="" />
+        <p>Hirkani</p>
+      </div>
+      <div class="story story5" style="background-image: linear-gradient(transparent,rgba(0,0,0,0.5)), url();">
+        <img src="" />
+        <p>Khushi Nathani</p>
+      </div>
+    </div>
+    <div class="write-post-container">
+      <div class="user-profile">
+        <img src={{profile_image}} />
+        <div>
+          <p>{{full_name.first_name}} {{full_name.last_name}}</p>
+          <small>Public <i class="fas fa-caret-down"></i></small>
+        </div>
+      </div>
+      <div class="post-input-container">
+        <textarea rows="3" placeholder="What's on your mind, {{full_name.first_name}}?"></textarea>
+        <div class="add-post-links">
+          <a href="#"
+            ><img src="" />Live
+            Video</a
+          >
+          <a href="#"
+            ><img src="" />Photo/Video</a
+          >
+          <a href="#"
+            ><img
+              src=""
+            />Feling/Activity</a
+          >
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let post of posts" class="post-container">
+      <div class="post-row">
+        <div class="user-profile">
+          <img [src]="post.imgSrc" />
+          <div>
+            <p>{{ post.userName }}</p>
+            <span>{{ post.timestamp }}</span>
+          </div>
+        </div>
+        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+      </div>
+      <p class="post-text" [innerHTML]="post.postText"></p>
+      <img [src]="post.postImgSrc" class="post-img" />
+      <div class="post-row">
+        <div class="activity-icons">
+          <div>
+            <img src="https://i.postimg.cc/pLKNXrMq/like-blue.png" />{{ post.likeCount }}
+          </div>
+          <div><img src="https://i.postimg.cc/rmjMymWv/comments.png" />{{ post.commentCount }}</div>
+          <div><img src="https://i.postimg.cc/T2bBchpG/share.png" />{{ post.shareCount }}</div>
+        </div>
+        <div class="post-porfile-icon">
+          <img [src]="post.imgSrc" /><i class="fas fa-caret-down"></i>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="load-more-btn">Load More</button>
+  </div>
+  <!----------------Right Sidebar----------------------->
+  <div class="right-sidebar">
+    <div class="sidebar-title">
+      <h4>Events</h4>
+      <a href="#">See All</a>
+    </div>
+    <div *ngFor="let event of events" class="event">
+      <div class="left-event">
+        <h3>{{ event.event_date }}</h3>
+        <span>{{ event.event_month }}</span>
+      </div>
+    
+      <div class="right-event">
+        <h4>{{ event.event_desc }}</h4>
+        <p><i class="fas fa-map-marker-alt"></i> {{ event.event_location }}</p>
+        <a href="#">More Info</a>
+      </div>
+    </div>
+    <div class="sidebar-title">
+      <h4>Advertisement</h4>
+      <a href="#">close</a>
+    </div>
+    <img
+      src="https://i.postimg.cc/CLXYx9BL/advertisement.png"
+      class="siderbar-ads"
+    />
+    <div class="sidebar-title">
+      <h4>Conversation</h4>
+      <a href="#">Hide Chat</a>
+    </div>
+    <div *ngFor="let convo of conversation" class="online-list">
+      <div class="online">
+        <img [src]="convo.convo_img_url" alt="{{ convo.convo_name }}" />
+      </div>
+      <p>{{ convo.convo_name }}</p>
+    </div>
+  </div>
+</div>
